@@ -1,0 +1,70 @@
+body {
+    background-color: #ffe6f0; /* Fondo rosado claro */
+    font-family: 'Quicksand', sans-serif; /* Tipografía legible y femenina */
+    text-align: center; /* Centra los textos */
+    color: #ff1493; /* Color de texto rosado fuerte */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 40px; /* Tamaño de las imágenes */
+    height: 40px;
+    margin: 0 5px; /* Espacio entre las imágenes */
+    vertical-align: middle; /* Alineación vertical */
+}
+
+.instagram-embed {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.instagram-embed p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+@media (min-width: 600px) {
+    .social-icons img {
+        width: 50px; /* Tamaño de las imágenes */
+        height: 50px;
+        margin: 0 10px; /* Espacio entre las imágenes */
+    }
+}
+
+@media (min-width: 1024px) {
+    .instagram-embed p {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+}
+
+#image-container {
+    margin-top: 20px;
+}
+
+#image-display {
+    max-width: 100%; /* Ajustar la imagen al contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+}
