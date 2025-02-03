@@ -298,3 +298,13 @@ footer {
     padding: 10px;
     font-size: 14px;
 }
+
+/* Eliminar bordes redondeados en móviles */
+@media (max-width: 768px) {
+    .perfil,
+    .instagram-feed,
+    .tiktok-feed,
+    .contacto {
+        border-radius: 0; /* Secciones con bordes cuadrados en celulares */
+    }
+}
