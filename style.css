@@ -304,23 +304,37 @@ footer {
     padding: 10px;
     font-size: 14px;
 }
+
+
 /* 📱 Centrar todas las secciones en móviles */
 @media screen and (max-width: 768px) {
     .perfil,
     .instagram-feed,
     .tiktok-feed,
     .contacto {
-        width: 90%; /* Ajusta el ancho sin pegarlo a los bordes */
-        max-width: none; /* Elimina el límite de 500px */
-        padding: 20px; /* Añade espacio interno */
-        margin: 20px auto; /* Centra las secciones */
-        text-align: center; /* Asegura que el texto esté centrado */
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        margin: 20px auto;
+        text-align: center;
+        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
     }
 
-    /* 🔘 Botones centrados */
+    /* 🔘 Evitar que los botones ocupen toda la pantalla */
     .btn {
-        display: block; /* Hace que los botones ocupen todo el ancho disponible */
-        width: fit-content; /* Mantiene el tamaño del contenido */
-        margin: 10px auto; /* Centra los botones */
+        display: inline-block; 
+        width: auto; /* Evita que se expandan demasiado */
+        margin: 10px auto;
+    }
+}
+
+/* 🔍 Forzar margen en Chrome Android */
+@supports (-webkit-touch-callout: none) {
+    .perfil,
+    .instagram-feed,
+    .tiktok-feed,
+    .contacto {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
