@@ -1,48 +1,92 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Anto Leighton</title>
-        <link rel="icon" type="image/x-icon" href="images/star-xxl.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    <body>
-        <h1>¡Holi!</h1>
-        <h2>¡Te amo!</h2>
-        <p>¡Es para que te armes una idea!</p>
-        <div class="instagram-embed">
-            <p>Haz clic para ver mi último video</p>
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C8NE1YXA4pI/" data-instgrm-version="14" style="background:#FFF; border:0; margin: 1px; max-width:540px; width:calc(100% - 2px); min-width:326px; padding:0;">
-                <div style="padding:16px;"> 
-                    <a href="https://www.instagram.com/reel/C8NE1YXA4pI/" style="color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ver este Reel en Instagram</a>
-                </div>
-            </blockquote>
-            <script async src="//www.instagram.com/embed.js"></script>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anto Leighton</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- JavaScript -->
+    <script defer src="script.js"></script>
+
+    <!-- Script de TikTok -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let script = document.createElement("script");
+            script.src = "https://www.tiktok.com/embed.js";
+            script.async = true;
+            document.body.appendChild(script);
+        });
+    </script>
+    
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Anto Leighton</h1>
+        <p>Bienvenidos a mi mundo ✨</p>
+    </header>
+
+    <!-- Perfil Mejorado -->
+    <section class="perfil">
+        <div class="perfil-contenedor">
+            <div class="perfil-img-contenedor">
+                <img src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/f488dba48d713d6b5eeee0a972be6f61~c5_1080x1080.jpeg?lk3s=1a13ec60&nonce=74826&refresh_token=da949a7126ba80975e7681aa6765c646&x-expires=1738648800&x-signature=a%2FDKV6n%2F2yKu%2FPcu%2Bj3qPgGnt3g%3D&shp=1a13ec60&shcp=-" alt="Foto de Anto" class="perfil-img">
+            </div>
+            <h2 class="perfil-nombre">✨ Anto Leighton ✨</h2>
+            <p class="perfil-descripcion">Bienvenidos a mi mundo, sígueme en mis redes y descubre mi contenido. 🚀💖</p>
+            <div class="redes">
+                <a href="https://www.instagram.com/antoleiighton/" target="_blank" class="btn instagram">📸 Instagram</a>
+                <a href="https://www.tiktok.com/@antoleiighton" target="_blank" class="btn tiktok">🎬 TikTok</a>
+            </div>
         </div>
+    </section>
 
 
-    <!-- Botón para mostrar la imagen -->
-    <button id="show-image-btn">Mostrar Imagen</button>
-
-
-    <script src="scripts.js"></script>
-
-
-        <div class="social-icons">
-            <a href="https://www.instagram.com/antoleighton_/" target="_blank">
-                <img src="images/instagram-icon.png" alt="Instagram">
-            </a>
-            <a href="https://www.tiktok.com/@antoleiighton" target="_blank">
-                <img src="images/tiktok-icon.png" alt="TikTok">
-            </a>
-            <a href="mailto:contacto@antoleighton.com">
-                <img src="images/email-icon.png" alt="Contacto">
-            </a>
+    <!-- Sección de Instagram -->
+    <section class="instagram-feed">
+        <h2>📷 Últimas publicaciones en Instagram</h2>
+        <div class="instagram-contenedor">
+            <iframe src="https://www.instagram.com/antoleiighton/embed" width="320" height="440" frameborder="0"></iframe>
         </div>
+    </section>
+    
+    <!-- Sección de TikTok -->
+    <section class="tiktok-feed">
+        <h2>🎬 Últimos videos en TikTok</h2>
+        <p>Haz clic abajo para ver mis últimos videos en TikTok ⬇️</p>
+        <a href="https://www.tiktok.com/@antoleiighton" target="_blank" class="btn tiktok-btn">🔗 Ver mi TikTok</a>
+    </section>
 
 
+    <!-- Sección de Contacto Mejorada -->
+    <section class="contacto">
+        <h2>📩 Contáctame</h2>
+        <p>¿Tienes alguna pregunta o propuesta? ¡Escríbeme!</p>
+    
+        <div class="contacto-info">
+            <p class="email">
+                📧 <a href="mailto:contacto@antoleighton.com">contacto@antoleighton.com</a>
+            </p>
+        </div>
+    
+        <a href="mailto:contacto@antoleighton.com" class="btn contacto-btn">
+            ✉️ Enviar Correo
+        </a>
+    </section>
 
-        <p></p>
-        <div class="spacer"></div> <!-- Espacio en blanco -->
-        <script src="scripts.js"></script>
-    </body>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Anto Leighton | Creado con ❤️</p>
+    </footer>
+
+</body>
+</html>
+
