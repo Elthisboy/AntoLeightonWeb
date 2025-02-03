@@ -306,18 +306,22 @@ footer {
 }
 
 
-/* 📱 Centrar todas las secciones en móviles */
+/* 📱 Centrar todas las secciones en móviles con espacio a los lados */
 @media screen and (max-width: 768px) {
+    body {
+        padding: 0 15px; /* Agrega espacio a los lados del cuerpo de la página */
+    }
+
     .perfil,
     .instagram-feed,
     .tiktok-feed,
     .contacto {
-        width: 90%;
-        max-width: 500px;
-        padding: 200px;
+        width: 100%; /* Permite que se ajusten bien sin tocar los bordes */
+        max-width: 500px; /* No se expande demasiado */
+        padding: 20px;
         margin: 20px auto;
         text-align: center;
-        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+        box-sizing: border-box; /* Asegura que el padding no haga crecer el tamaño */
     }
 
     /* 🔘 Evitar que los botones ocupen toda la pantalla */
@@ -330,6 +334,10 @@ footer {
 
 /* 🔍 Forzar margen en Chrome Android */
 @supports (-webkit-touch-callout: none) {
+    body {
+        padding: 0 15px; /* Espacio en los bordes también para Chrome Android */
+    }
+
     .perfil,
     .instagram-feed,
     .tiktok-feed,
