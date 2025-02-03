@@ -304,3 +304,22 @@ footer {
     padding: 10px;
     font-size: 14px;
 }
+/* 📱 Centrar todas las secciones en móviles */
+@media screen and (max-width: 768px) {
+    .perfil,
+    .instagram-feed,
+    .tiktok-feed,
+    .contacto {
+        width: 90%; /* Ajusta el ancho sin pegarlo a los bordes */
+        max-width: none; /* Elimina el límite de 500px */
+        margin: 20px auto; /* Centra las secciones */
+        text-align: center; /* Asegura que el texto esté centrado */
+    }
+
+    /* 🔘 Botones centrados */
+    .btn {
+        display: block; /* Hace que los botones ocupen todo el ancho disponible */
+        width: fit-content; /* Mantiene el tamaño del contenido */
+        margin: 10px auto; /* Centra los botones */
+    }
+}
