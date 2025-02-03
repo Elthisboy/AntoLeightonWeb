@@ -362,9 +362,12 @@ footer {
     .instagram-feed,
     .tiktok-feed,
     .contacto {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 15px;
+        width: calc(100% - 30px); /* Asegura que haya espacio en los lados */
+        max-width: 500px;
+        padding: 20px;
+        margin: 20px auto;
+        text-align: center;
+        box-sizing: border-box;
     }
 
     footer {
