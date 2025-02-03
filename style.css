@@ -12,7 +12,7 @@ body {
 header {
     background-color: #ff69b4;
     color: white;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* 🔥 Sección de Perfil Mejorada 🔥 */
@@ -20,11 +20,23 @@ header {
     background: linear-gradient(45deg, #ff69b4, #ff1493, #ff69b4, #ff1493);
     background-size: 300% 300%;
     animation: fondoAnimado 6s infinite alternate;
-    padding: 50px 20px;
+    padding: 40px 20px; /* Igual a otras secciones */
     text-align: center;
     color: white;
     border-radius: 15px;
+    max-width: 500px; /* Igual a .instagram-feed, .tiktok-feed, .contacto */
+    margin: 30px auto; /* Centrar y mantener el mismo espaciado */
+    box-shadow: 0px 5px 20px rgba(255, 105, 180, 0.5); /* Añadir el mismo efecto de sombra */
 }
+
+/* 📱 Ajuste para móviles */
+@media screen and (max-width: 768px) {
+    .perfil {
+        border-radius: 0 !important; /* Igual que las otras secciones en móviles */
+        width: 100%; /* Ocupar todo el ancho disponible en celulares */
+    }
+}
+
 
 /* 🎭 Animación del fondo */
 @keyframes fondoAnimado {
@@ -297,14 +309,4 @@ footer {
     color: white;
     padding: 10px;
     font-size: 14px;
-}
-
-/* Eliminar bordes redondeados en móviles */
-@media (max-width: 768px) {
-    .perfil,
-    .instagram-feed,
-    .tiktok-feed,
-    .contacto {
-        border-radius: 0; /* Secciones con bordes cuadrados en celulares */
-    }
 }
