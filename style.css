@@ -13,6 +13,10 @@ header {
     background-color: #ff69b4;
     color: white;
     padding: 5px;
+    width: 100vw; /* Asegura que siempre ocupe el ancho de la pantalla */
+    margin: 0;
+    padding: 10px 0; /* Ajusta el espacio interno */
+    text-align: center;
 }
 
 /* 🔥 Sección de Perfil Mejorada 🔥 */
@@ -304,15 +308,23 @@ header {
 footer {
     background-color: #222;
     color: white;
-    padding: 10px;
     font-size: 14px;
+    width: 100vw; /* Asegura que siempre ocupe el ancho de la pantalla */
+    margin: 0;
+    padding: 10px 0; /* Ajusta el espacio interno */
+    text-align: center;
 }
 
 
 /* 📱 Centrar todas las secciones en móviles con espacio a los lados */
 @media screen and (max-width: 768px) {
-
-
+    body, html {
+        overflow-x: hidden; /* Evita desbordamientos laterales */
+    }
+    
+    header, footer {
+        width: 100vw; /* Fuerza el ancho en móviles */
+    }
     .perfil,
     .instagram-feed,
     .tiktok-feed,
@@ -322,7 +334,8 @@ footer {
         padding: 20px;
         margin: 20px auto;
         text-align: center;
-        box-sizing: border-box; /* Asegura que el padding no haga crecer el tamaño */
+        box-sizing: border-box;
+        padding: 0 15px; /* Asegura que el padding no haga crecer el tamaño */
     }
 
     /* 🔘 Evitar que los botones ocupen toda la pantalla */
@@ -336,12 +349,12 @@ footer {
 /* 🔍 Forzar margen en Chrome Android */
 @supports (-webkit-touch-callout: none) {
 
-
     .perfil,
     .instagram-feed,
     .tiktok-feed,
     .contacto {
         margin-left: auto;
         margin-right: auto;
+        padding: 0 15px;
     }
 }
