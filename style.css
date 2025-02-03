@@ -311,9 +311,7 @@ footer {
 
 /* 📱 Centrar todas las secciones en móviles con espacio a los lados */
 @media screen and (max-width: 768px) {
-    body {
-        padding: 0 15px; /* Agrega espacio a los lados del cuerpo de la página */
-    }
+
 
     .perfil,
     .instagram-feed,
@@ -337,9 +335,7 @@ footer {
 
 /* 🔍 Forzar margen en Chrome Android */
 @supports (-webkit-touch-callout: none) {
-    body {
-        padding: 0 15px; /* Espacio en los bordes también para Chrome Android */
-    }
+
 
     .perfil,
     .instagram-feed,
