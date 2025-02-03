@@ -299,12 +299,20 @@ footer {
     font-size: 14px;
 }
 
-/* Eliminar bordes redondeados en móviles */
-@media (max-width: 768px) {
+/* 🔥 Secciones con bordes redondeados en pantallas grandes */
+.perfil,
+.instagram-feed,
+.tiktok-feed,
+.contacto {
+    border-radius: 15px; /* Bordes redondeados por defecto */
+}
+
+/* 📱 Eliminar bordes redondeados en móviles */
+@media screen and (max-width: 768px) {
     .perfil,
     .instagram-feed,
     .tiktok-feed,
     .contacto {
-        border-radius: 0; /* Secciones con bordes cuadrados en celulares */
+        border-radius: 0px !important; /* 🔥 Fuerza el cambio eliminando bordes */
     }
 }
