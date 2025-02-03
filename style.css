@@ -312,6 +312,7 @@ footer {
     .contacto {
         width: 90%; /* Ajusta el ancho sin pegarlo a los bordes */
         max-width: none; /* Elimina el límite de 500px */
+        padding: 20px; /* Añade espacio interno */
         margin: 20px auto; /* Centra las secciones */
         text-align: center; /* Asegura que el texto esté centrado */
     }
