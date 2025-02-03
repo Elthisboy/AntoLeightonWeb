@@ -323,28 +323,20 @@ footer {
 
 /* 📱 Centrar todas las secciones en móviles con espacio a los lados */
 @media screen and (max-width: 768px) {
-    body, html {
-        overflow-x: hidden; /* Evita desbordamientos laterales */
-    }
-    
     header{
-        border-radius: 15px;
         width: 100%;
     }
-    footer {
-        width: 100vw; /* Fuerza el ancho en móviles */
-    }
+   
     .perfil,
     .instagram-feed,
     .tiktok-feed,
     .contacto {
-        width: 100%; /* Permite que se ajusten bien sin tocar los bordes */
-        max-width: 500px; /* No se expande demasiado */
+        width: calc(100% - 30px); /* Asegura que haya espacio en los lados */
+        max-width: 500px;
         padding: 20px;
         margin: 20px auto;
         text-align: center;
         box-sizing: border-box;
-        padding: 0 15px; /* Asegura que el padding no haga crecer el tamaño */
     }
 
     /* 🔘 Evitar que los botones ocupen toda la pantalla */
@@ -353,17 +345,19 @@ footer {
         width: auto; /* Evita que se expandan demasiado */
         margin: 10px auto;
     }
+
+    footer {
+        width: 100vw; /* Fuerza el ancho en móviles */
+    }
+    
 }
 
 /* 🔍 Forzar margen en Chrome Android */
 @supports (-webkit-touch-callout: none) {
     header{
-        border-radius: 15px;
         width: 100%;
     }
-    footer {
-        width: 100%;
-    }
+
     .perfil,
     .instagram-feed,
     .tiktok-feed,
@@ -371,5 +365,9 @@ footer {
         margin-left: auto;
         margin-right: auto;
         padding: 0 15px;
+    }
+
+    footer {
+        width: 100%;
     }
 }
