@@ -17,7 +17,7 @@ header {
     margin: 0;
     padding: 10px 0; /* Ajusta el espacio interno */
     text-align: center;
-    box-sizing: border-box; /* Evita que el padding afecte el tamaño total */
+    box-sizing: border-box;    /* Evita que el padding afecte el tamaño total */
 
 }
 
@@ -327,7 +327,11 @@ footer {
         overflow-x: hidden; /* Evita desbordamientos laterales */
     }
     
-    header, footer {
+    header{
+        border-radius: 15px;
+        width: 100%;
+    }
+    footer {
         width: 100vw; /* Fuerza el ancho en móviles */
     }
     .perfil,
@@ -353,7 +357,11 @@ footer {
 
 /* 🔍 Forzar margen en Chrome Android */
 @supports (-webkit-touch-callout: none) {
-    header, footer {
+    header{
+        border-radius: 15px;
+        width: 100%;
+    }
+    footer {
         width: 100%;
     }
     .perfil,
