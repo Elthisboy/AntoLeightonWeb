@@ -44,6 +44,33 @@
             <div class="redes">
                 <a href="https://www.instagram.com/antoleiighton/" target="_blank" class="btn instagram">📸 Instagram</a>
                 <a href="https://www.tiktok.com/@antoleiighton" target="_blank" class="btn tiktok">🎬 TikTok</a>
+                <h1>Seguidores de Instagram: <span id="ig-followers">Cargando...</span></h1>
+
+                <script>
+                    async function getFollowers() {
+                        try {
+                            let username = "cuenta_instagram"; // Reemplázalo con la cuenta de Instagram
+                            let response = await fetch(`https://socialstats.info/instagram/${username}`);
+                            let html = await response.text();
+            
+                            // Buscar el número de seguidores en el HTML
+                            let match = html.match(/<span class="followers">([\d,]+)<\/span>/);
+            
+                            if (match) {
+                                document.getElementById("ig-followers").innerText = match[1].replace(/,/g, '');
+                            } else {
+                                document.getElementById("ig-followers").innerText = "No disponible";
+                            }
+                        } catch (error) {
+                            console.error("Error al obtener seguidores:", error);
+                            document.getElementById("ig-followers").innerText = "Error";
+                        }
+                    }
+            
+                    getFollowers();
+                    setInterval(getFollowers, 60000); // Actualizar cada 60 segundos
+                </script>
+
             </div>
         </div>
     </section>
@@ -61,7 +88,16 @@
     <section class="tiktok-feed">
         <h2>🎬 Últimos videos en TikTok</h2>
         <p>Haz clic abajo para ver mis últimos videos en TikTok ⬇️</p>
-        <a href="https://www.tiktok.com/@antoleiighton" target="_blank" class="btn tiktok-btn">🔗 Ver mi TikTok</a>
+    
+        <!-- Contenedor de estadísticas -->
+        <div id="tiktok-stats" class="tiktok-stats">
+            <p>👥 Seguidores: <span id="tiktok-followers">Cargando...</span></p>
+            <p>❤️ Me gusta: <span id="tiktok-likes">Cargando...</span></p>
+        </div>
+    
+        <a href="https://www.tiktok.com/@antoleiighton" target="_blank" class="btn tiktok-btn">
+            🔗 Ver mi TikTok
+        </a>
     </section>
 
 
